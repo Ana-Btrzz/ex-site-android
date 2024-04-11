@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'android';
+    src: url(/itens/fontes/idroid.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'capitan';
+    src: url(/itens/fontes/American\ Captain.ttf) format('truetype');
+}
+
+:root {
+    --verde-claro: rgb(166, 240, 188);
+    --verde-escuro: rgb(19, 85, 37);
+    --verde: rgb(48 189 107);
+}
+
+body {
+    background-color: var(--verde-claro);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p::first-letter {
+    margin-left: 25px;
+}
+
+header {
+    background-image: linear-gradient(rgb(20, 189, 90) 50%, rgb(3, 133, 59), rgb(16, 77, 32));
+    color: aliceblue;
+    padding: 10px;
+}
+
+nav a {
+    color: aliceblue;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 9px;
+    margin: 15px; 
+}
+
+header h1, header p {
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: 'capitan';
+    font-size: 2.5em;
+    letter-spacing: 2.5px;
+}
+
+header p {
+    font-size: 1.3em;
+    padding-bottom: 15px;
+}
+
+nav, .subtitle, .intro  h1 {
+    font-family: 'android';
+}
+
+.intro > h1 {
+    color: var(--verde-escuro);
+}
+
+main {
+    background-color: aliceblue;
+    margin: 0px auto;
+    max-width: 1200px;
+    min-width: 300px;
+}
+
+main > * :not(.video, .versoes, .ilustradora, .android, .video, source){
+    padding: 8px 25px;
+}
+
+.subtitle {
+    background-image: linear-gradient(269deg, transparent, rgb(65 231 135 / 10%) 50%, rgb(36 175 95 / 44%));
+    margin: 15px;
+    color: rgb(1, 100, 29);
+    border-radius: 15px 0 0 15px;
+}
+
+.versoes, .ilustradora, .android, .video {
+    display: flex;
+    justify-content: center;
+}
+
+.video {
+    background-color: var(--verde-escuro);
+    padding: 25px 60px;
+}
+
+video {
+    width: 100%;
+}
+
+.curiosidades {
+    background-color: var(--verde-claro);
+    margin: 25px;
+    border-radius: 20px;
+}
+
+.curiosidades  h2 {
+    background-color: var(--verde);
+    color: aliceblue;
+    border-radius: 20px 20px 0 0;
+}
+
+.curiosidades ul {
+    columns: 2 auto;
+}
+
+.curiosidades li {
+    list-style: none;
+}
+
+li::before {
+    content: '➜';
+}
+
+footer {
+    background-color: var(--verde-escuro);
+    display: flex;
+    justify-content: center;
+}
+
+nav > a {
+    transition: .5s;
+}
+
+nav > a:hover {
+    background-color: rgb(2, 49, 2);
+}
+
+@media screen and (max-width: 800px){
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    img {
+        width: 100%;
+    }
+}
