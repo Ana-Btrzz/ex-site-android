@@ -6,12 +6,12 @@
 
 @font-face {
     font-family: 'android';
-    src: url(itens/fontes/idroid.otf) format('truetype');
+    src: url(./itens/fontes/idroid.otf) format('truetype');
 }
 
 @font-face {
     font-family: 'capitan';
-    src: url(itens/fontes/American\ Captain.ttf) format('truetype');
+    src: url(./itens/fontes/American\ Captain.ttf) format('truetype');
 }
 
 :root {
